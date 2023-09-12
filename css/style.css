@@ -91,7 +91,6 @@ button {
 
 .nav {
 
-        color: var(--navy-blue);
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -106,7 +105,6 @@ button {
         display: flex;
         gap: 40px;
 
-        color: var(--navy-blue);
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -114,24 +112,43 @@ button {
 
 }
 
+.nav-list-item {
+
+        position: relative;
+}
+
+.nav-list-item:hover .nav-link::after {
+
+        width: 100%;
+        color: var(--ocean)
+
+} 
+
 .nav-link {
 
         color: var(--navy-blue);
-        cursor: default;
-        
 }
 
-a.nav-link:hover {
+.nav-link::after {
 
-        color: var(--ocean);
-        
-}
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+ 
+        width: 0;
+        height: 4px;
 
-.address {
+        border-radius: 2px;
+        background-color: var(--ocean);
+
+} 
+
+.address { 
 
         color: var(--slate);
         font-size: 16px;
-        line-height: 24px;
+        line-height: 24px; 
         letter-spacing: 0.32px;
         
         display: inline-flex;
@@ -373,6 +390,10 @@ a.address-link:hover {
 
 .team-icons {
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         background-color: var(--iris);
         width: 40px;
         height: 40px;
@@ -391,7 +412,6 @@ a.address-link:hover {
         width: 16px;
         height: 16px;
 
-        margin: 12px 12px;
 }
 
 
@@ -458,6 +478,10 @@ a.address-link:hover {
 }
 
 .footer-icons {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         background-color: var(--iris);
         width: 40px;
@@ -593,24 +617,24 @@ a.address-link:hover {
         gap: 24px;
 }
 
-.icons-list svg {
+.icons-list {
 
-        fill: var(--light-slate);
+        border: 1px solid var(--light-slate);
+        border-radius: 4px;
+        color: var(--light-slate);
+        height: 88px;
 
 }
 
-.icons-list svg:hover {
+.icons-list:hover {
 
-        fill: var(--ocean);
-        border-radius: 4px;
-        border: 1px solid var(--ocean);
-        
+        color: var(--ocean);
+        border-color: var(--ocean);
 }
 
 .icons-item {
 
-        border: 1px solid var(--light-slate);
-        border-radius: 4px;
+        fill: currentColor;
 
         width: 168px;
         height: 88px;
