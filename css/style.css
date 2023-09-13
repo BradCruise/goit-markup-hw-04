@@ -120,9 +120,14 @@ button {
 .nav-list-item:hover .nav-link::after {
 
         width: 100%;
-        color: var(--ocean)
 
-} 
+}
+
+.nav-list-item:hover .nav-link:hover {
+
+        color: var(--ocean);
+
+}
 
 .nav-link {
 
